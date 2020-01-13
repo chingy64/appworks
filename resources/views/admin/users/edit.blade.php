@@ -53,12 +53,23 @@ C/O https://placeholder.com/'}}" alt="" class="img-responsive img-rounded">
 </div>
 
 <div class="form-group">
-    {!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
+    {!! Form::submit('Update User', ['class'=>'btn btn-primary col-sm-6']) !!}
 </div>
 
   @include('includes.error')
+  
+{!! Form::close() !!}
+
+{!! Form::open(['method'=>'DELETE', 'action'=> ['adminUsersController@destroy', $user->id]]) !!}
+
+
+
+<div class="form-group">
+   {!! Form::submit('Delete user', ['class'=>'btn btn-danger col-sm-6']) !!}
+</div>
 
 {!! Form::close() !!}
+
 
 </div>
 
