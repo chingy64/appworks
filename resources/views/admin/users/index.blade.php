@@ -5,6 +5,13 @@
 
 @section('content')
 
+     @if(Session::has('deleted_user'))
+
+            <h2 class="alert alert-success">{{session('deleted_user')}}</h2>
+
+
+     @endif
+
 <h1>Users</h1>
 <table class="table table-striped">
     <thead>
