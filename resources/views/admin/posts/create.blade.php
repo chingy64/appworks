@@ -16,7 +16,7 @@
 
             <div class="form-group">
                 {!! Form::label('category_id', 'Category:') !!}
-                {!! Form::select('category_id', [1=>'laravel',2=>'javascript'], null, ['class'=>'form-control'])!!}
+                {!! Form::select('category_id', [''=>'choose categories'] + $categories, null, ['class'=>'form-control'])!!}
             </div>
 
             <div class="form-group">
